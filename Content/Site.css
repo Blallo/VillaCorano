@@ -1,0 +1,107 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bgimg {
+    background-image: url('../images/acheo.jpg');
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+
+#first .smashinglogo{
+    background: url('../Images/acheo.jpg');
+   background-size: cover;
+    background-position: center;
+     height:400px;
+  padding:50px 0;
+  transition:all 400ms cubic-bezier(0.25,0.1,0.25,1) 0s;
+  -webkit-transition:all 400ms cubic-bezier(0.25,0.1,0.25,1) 0s;width:100%;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+.ui-accordion-content-active
+{
+    /*padding: 0 !important;*/
+    border-style: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.ui-accordion-header { background-color: transparent; }
+
+.ui-accordion-header.ui-state-active { background-color: transparent; }
+
+.semiRow {
+    height: 25%;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*padding-top: 15px;*/
+    position: relative;
+    /*padding-bottom: 15px;*/
+    
+}
+
+.semiRowBigger {
+       position: relative;
+    height: 57%;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-bottom: 8px;
+    padding-right: 0;
+}
+
+
+    .semiRowBigger img {
+       
+        width: 100%;
+        padding-left: 0;
+        /*padding-bottom: 60%;*/
+
+
+               
+    }
+
+    .privacy
+{
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-family: 'Ariarl';
+    text-align: justify; 
+}

@@ -1,0 +1,295 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ body {
+     
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 350px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+     top: 80px;
+    /*height: 100%;*/
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #222222;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-repeat: no-repeat;
+     box-shadow: 10px 10px 5px #222222;
+       background-image:url('../Images/pitigliano.JPG');
+}
+
+
+.fontStyleFooter
+{
+    background-color: transparent;
+    font-family: 'harlow_solid_italicitalic';
+    font-size: medium;
+}
+
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 350px;
+}
+
+#page-content-wrapper {
+   width: 100%;
+    top: 0px;
+    position: relative;
+    /*max-height: 1000px;*/
+    height: auto;
+     background-image: none;
+    /*background-image:url('../Images/aziendanew.jpg');*/
+    background-repeat: no-repeat;
+        background-size: cover;
+
+}
+
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #222222;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+.fontStyleMar
+{
+    background-color: transparent;
+    color: wheat;
+    /*font-family: 'harlow_solid_italicitalic';*/
+     font-size: large;
+    /*background-color:rgba(0,0,0,0.8);
+      box-shadow: 10px 10px 5px #222222;*/
+}
+.fontStyleMar p
+{
+    background-color: transparent;
+    color: wheat;
+    /*font-family: 'harlow_solid_italicitalic';*/
+    font-size: xx-large;
+    /*background-color:rgba(0,0,0,0.8);
+      box-shadow: 10px 10px 5px #222222;*/
+    padding-top: 0;
+
+  
+}
+
+
+.fontStyleHeader
+{
+    background-color: transparent;
+    color: darkblue;
+    font-family: 'harlow_solid_italicitalic';
+    font-size: medium;
+}
+@media(min-width:1200px) {
+    #wrapper {
+        padding-left: 350px;
+    }
+
+     .jumbotronP ul {
+       font-size: x-large;
+    }
+    .jumbotronP li {
+      font-size: 25px;
+  }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        /*height: 1000px;*/
+           
+         width: 350px;
+        height: 100%;
+      
+
+    }
+
+     #sidebar-wrapper img {
+         /*height: 100%;*/
+
+    }
+
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+     #page-content-wrapper {
+         width: 100%;
+         height: 100%;
+        position: relative;
+         background-image: none;
+        /*background-image:url('../Images/aziendanew.JPG');*/
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+.jumbotronP {
+      vertical-align: middle;
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 2.1428571435;    
+  background-color:transparent;
+  font-family: 'harlow_solid_italicitalic';
+}
+
+.jumbotronP ul {
+  line-height: 1;
+  color: inherit;
+      font-size: 18px;
+   /*padding-left: 150px;*/
+     text-align: center;
+     vertical-align: middle;
+background-color:rgba(0,0,0,0.6);
+      box-shadow: 10px 10px 5px #222222;
+}
+
+.jumbotronP p {
+  line-height: 1;
+  color: whitesmoke;
+  font-size: 22px;
+   /*padding-left: 150px;*/
+    text-align: center;
+     vertical-align: middle;
+background-color:rgba(0,0,0,0.6);
+      box-shadow: 10px 10px 5px #222222;
+}
+
+.container .jumbotronP {
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .container .jumbotronP {
+    padding-right: 10px;
+    padding-left: 10px;
+     
+  }
+
+}
+.listyle li {
+    list-style: none;
+}
+#footer{
+
+    position: relative;
+    margin-left: 370px; 
+}
+
+.carousel-inner > .item > a > img {
+  height: 400px;
+
+}
+
+.img-responsive-mine {
+    width: 100%;
+      height: 400px;
+    }
+
+#footer{
+
+    position: relative; 
+    margin-left: 370px; 
+}
+
+@media(max-width: 1200px) {
+    #footer {
+        position: relative;
+        bottom: -20px;
+        padding-top: 0px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    #myCarousel {
+        display: none;
+    }
+    .fontStyleMar {
+        padding-top: 190px;
+    }
+}
+
+@media (max-width: 350px) {
+    #footer {
+        display: none;
+    }
+   
+}

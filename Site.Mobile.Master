@@ -1,0 +1,124 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="VillaCorano.Site_Mobile" %>
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Villa Corano, Azienda Vitivinicola, Vini, Maremma Toscana Pitigliano, Bianco di Pitigliano Rosso di sovana, vini doc, Chardonnay, Sauvignon, Alicante, Aleatico, Cabernet</title>
+        
+    <asp:PlaceHolder runat="server">
+    <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+   <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="CurrentStyleSheet" runat="server">
+             <link rel="stylesheet" href="/Content/simple-sidebar.css" type="text/css" />
+          <link rel="stylesheet" href="Content/full-slider.css" type="text/css" />
+                <link rel="stylesheet" href="Content/Site.css" type="text/css" />
+
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:#222222">
+    <form id="form1" runat="server">
+           <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--Per ulteriori informazioni sulla creazione di bundle di script in ScriptManager, vedere http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Script framework--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference   Path="~/Scripts/Custom.js" />
+                <asp:ScriptReference   Path="~/Scripts/jssor.slider.mini.js" />
+                <asp:ScriptReference   Path="~/Scripts/jquery-ui.js" />
+                <asp:ScriptReference   Path="~/Scripts/jquery-ui.js" />
+            
+                <asp:ScriptReference Name="WebFormsBundle" />
+    
+                <asp:ScriptReference Path="Scripts/modernizr.custom.79639.js"></asp:ScriptReference>
+                <asp:ScriptReference Path="Scripts/jquery.mousewheel.js"></asp:ScriptReference>
+		        <asp:ScriptReference Path="Scripts/jquery.jscrollpane.min.js"></asp:ScriptReference>
+	        	<asp:ScriptReference Path="Scripts/jquerypp.custom.js"></asp:ScriptReference>
+		        <asp:ScriptReference Path="Scripts/jquery.bookblock.js"></asp:ScriptReference>
+		        <asp:ScriptReference Path="Scripts/page.js"></asp:ScriptReference>
+                <%--Script sito--%>
+            </Scripts>
+        </asp:ScriptManager>
+  <%--  <div>
+        <h1>Mobile Master Page</h1>
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+        <friendlyUrls:ViewSwitcher runat="server" />
+    </div>--%>
+              <div id="wrapper" >
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+       <a class="navbar-brand" href="Default.aspx"><img  src="Images/LogoVillacorano.jpg" /></a>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>    
+  </div>
+ 
+  <div class="navbar-collapse collapse" style="font-family: 'harlow_solid_italicitalic'">
+    <ul class="nav navbar-nav navbar-left">
+        <li><a href="DefaultEnter.aspx">Home</a></li>
+        <li><a href="Azienda.aspx">Azienda</a></li>
+        <li><a href="Prodotti.aspx">Prodotti</a></li>
+        <li><a href="Ordini.aspx">Ordini</a></li>
+        <li><a href="Eventi.aspx">Eventi</a></li>
+    </ul>
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="Degustazioni.aspx">Degustazioni</a></li>
+       <li><a href="Contact.aspx">Contatti</a></li>
+       <li><a href="Maremma.aspx">Maremma</a></li>
+       <li><a href="Social.aspx">Social</a></li>
+    </ul>
+  </div>
+</nav>
+       
+
+    
+
+                <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+                 <asp:ContentPlaceHolder ID="SideContent" runat="server">
+            </asp:ContentPlaceHolder> 
+        </div>
+         <div id="page-content-wrapper">
+         <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                     
+            </asp:ContentPlaceHolder>
+                   </div>          
+         
+  
+
+               </div>
+                
+
+             </div>
+
+    </form>
+                      <footer id="footer" style="background-color: transparent;color: whitesmoke">
+      <hr/>
+        Az. Vitivinicola villa corano di Stefano Formiconi -- s.r. 74 Maremmana Km. 46,760 -- Loc. Corano 58017 Pitigliano ( G R ) 
+        -- c .f . : f r m s f n 4 2 l 3 1 g 7 1 6 t -- P . I V A: 00177710530<br/>
+                Designed by: Gabriele Predellini (G P 4 L)
+            </footer> 
+    
+</body>
+</html>
